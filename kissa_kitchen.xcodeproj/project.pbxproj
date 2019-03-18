@@ -7,26 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28586B69DE279004387078C1 /* Pods_kissa_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051444FB2D77FA925F65F189 /* Pods_kissa_list.framework */; };
 		AA1A11FE2151E85500504AE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A11FD2151E85500504AE2 /* AppDelegate.swift */; };
 		AA1A12002151E85500504AE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A11FF2151E85500504AE2 /* ViewController.swift */; };
 		AA1A12032151E85500504AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1A12012151E85500504AE2 /* Main.storyboard */; };
 		AA1A12052151E85800504AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1A12042151E85800504AE2 /* Assets.xcassets */; };
 		AA1A12082151E85800504AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1A12062151E85800504AE2 /* LaunchScreen.storyboard */; };
-		AA1A12122151EDAD00504AE2 /* BOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A12112151EDAD00504AE2 /* BOrderListViewController.swift */; };
-		AA1A1214215256CE00504AE2 /* BOutOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A1213215256CE00504AE2 /* BOutOrderListViewController.swift */; };
-		AA1A12162152682600504AE2 /* SOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A12152152682600504AE2 /* SOrderListViewController.swift */; };
-		AA1A12182153519C00504AE2 /* DOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A12172153519C00504AE2 /* DOrderListViewController.swift */; };
-		AA1A121A215351BC00504AE2 /* DeOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A1219215351BC00504AE2 /* DeOrderListViewController.swift */; };
-		AA2967FF217173170067634E /* DXOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2967FE217173170067634E /* DXOrderListViewController.swift */; };
 		AA755DC521800E9A003E482B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA755DC421800E9A003E482B /* GoogleService-Info.plist */; };
-		AAC44955218CDBF8006132CC /* SOutOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC44954218CDBF8006132CC /* SOutOrderListViewController.swift */; };
-		AAC44957218CDDB9006132CC /* BOutSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC44956218CDDB9006132CC /* BOutSubViewController.swift */; };
+		DAFA87FC90CA332335201299 /* Pods_kissa_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79B48210439E067AD4BEFFA /* Pods_kissa_list.framework */; };
+		EAFF068D223F9916007FD5F6 /* WOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF068C223F9915007FD5F6 /* WOrderListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		051444FB2D77FA925F65F189 /* Pods_kissa_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kissa_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B9AC1FF53855EFD24FF88C8 /* Pods-kissa_list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kissa_list.release.xcconfig"; path = "Pods/Target Support Files/Pods-kissa_list/Pods-kissa_list.release.xcconfig"; sourceTree = "<group>"; };
+		519AC206E3123BE275064708 /* Pods-kissa_list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kissa_list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kissa_list/Pods-kissa_list.debug.xcconfig"; sourceTree = "<group>"; };
+		A26CAD2CC485F03551F2EECD /* Pods-kissa_list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kissa_list.release.xcconfig"; path = "Pods/Target Support Files/Pods-kissa_list/Pods-kissa_list.release.xcconfig"; sourceTree = "<group>"; };
+		A79B48210439E067AD4BEFFA /* Pods_kissa_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kissa_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1A11FA2151E85500504AE2 /* kissa_list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kissa_list.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1A11FD2151E85500504AE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA1A11FF2151E85500504AE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,16 +28,8 @@
 		AA1A12042151E85800504AE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA1A12072151E85800504AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA1A12092151E85800504AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA1A12112151EDAD00504AE2 /* BOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOrderListViewController.swift; sourceTree = "<group>"; };
-		AA1A1213215256CE00504AE2 /* BOutOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOutOrderListViewController.swift; sourceTree = "<group>"; };
-		AA1A12152152682600504AE2 /* SOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOrderListViewController.swift; sourceTree = "<group>"; };
-		AA1A12172153519C00504AE2 /* DOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOrderListViewController.swift; sourceTree = "<group>"; };
-		AA1A1219215351BC00504AE2 /* DeOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeOrderListViewController.swift; sourceTree = "<group>"; };
-		AA2967FE217173170067634E /* DXOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXOrderListViewController.swift; sourceTree = "<group>"; };
 		AA755DC421800E9A003E482B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AAC44954218CDBF8006132CC /* SOutOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOutOrderListViewController.swift; sourceTree = "<group>"; };
-		AAC44956218CDDB9006132CC /* BOutSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOutSubViewController.swift; sourceTree = "<group>"; };
-		F861CE1F3706F44A523F7B97 /* Pods-kissa_list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kissa_list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kissa_list/Pods-kissa_list.debug.xcconfig"; sourceTree = "<group>"; };
+		EAFF068C223F9915007FD5F6 /* WOrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WOrderListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,20 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28586B69DE279004387078C1 /* Pods_kissa_list.framework in Frameworks */,
+				DAFA87FC90CA332335201299 /* Pods_kissa_list.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79B6D79DFA796C607DE7065C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A79B48210439E067AD4BEFFA /* Pods_kissa_list.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CD64AD8325BB1F46EAF952C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				519AC206E3123BE275064708 /* Pods-kissa_list.debug.xcconfig */,
+				A26CAD2CC485F03551F2EECD /* Pods-kissa_list.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AA1A11F12151E85500504AE2 = {
 			isa = PBXGroup;
 			children = (
-				AA1A11FC2151E85500504AE2 /* kissa_list */,
+				AA1A11FC2151E85500504AE2 /* kissa_kitchen */,
 				AA1A11FB2151E85500504AE2 /* Products */,
-				B8817DEE17800784C94B2917 /* Pods */,
-				BEA9E15335C2B89C15E5767E /* Frameworks */,
+				9CD64AD8325BB1F46EAF952C /* Pods */,
+				79B6D79DFA796C607DE7065C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,43 +79,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA1A11FC2151E85500504AE2 /* kissa_list */ = {
+		AA1A11FC2151E85500504AE2 /* kissa_kitchen */ = {
 			isa = PBXGroup;
 			children = (
 				AA1A11FD2151E85500504AE2 /* AppDelegate.swift */,
 				AA1A12012151E85500504AE2 /* Main.storyboard */,
 				AA1A11FF2151E85500504AE2 /* ViewController.swift */,
-				AA1A12112151EDAD00504AE2 /* BOrderListViewController.swift */,
-				AA1A1213215256CE00504AE2 /* BOutOrderListViewController.swift */,
-				AAC44956218CDDB9006132CC /* BOutSubViewController.swift */,
-				AA1A12152152682600504AE2 /* SOrderListViewController.swift */,
-				AAC44954218CDBF8006132CC /* SOutOrderListViewController.swift */,
-				AA1A12172153519C00504AE2 /* DOrderListViewController.swift */,
-				AA2967FE217173170067634E /* DXOrderListViewController.swift */,
-				AA1A1219215351BC00504AE2 /* DeOrderListViewController.swift */,
+				EAFF068C223F9915007FD5F6 /* WOrderListViewController.swift */,
 				AA1A12062151E85800504AE2 /* LaunchScreen.storyboard */,
 				AA1A12042151E85800504AE2 /* Assets.xcassets */,
 				AA1A12092151E85800504AE2 /* Info.plist */,
 				AA755DC421800E9A003E482B /* GoogleService-Info.plist */,
 			);
-			path = kissa_list;
-			sourceTree = "<group>";
-		};
-		B8817DEE17800784C94B2917 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F861CE1F3706F44A523F7B97 /* Pods-kissa_list.debug.xcconfig */,
-				0B9AC1FF53855EFD24FF88C8 /* Pods-kissa_list.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BEA9E15335C2B89C15E5767E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				051444FB2D77FA925F65F189 /* Pods_kissa_list.framework */,
-			);
-			name = Frameworks;
+			path = kissa_kitchen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,11 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA1A120C2151E85800504AE2 /* Build configuration list for PBXNativeTarget "kissa_list" */;
 			buildPhases = (
-				A3481E2E0264BF88F98EA682 /* [CP] Check Pods Manifest.lock */,
+				FF414FD6A402095508E19F59 /* [CP] Check Pods Manifest.lock */,
 				AA1A11F62151E85500504AE2 /* Sources */,
 				AA1A11F72151E85500504AE2 /* Frameworks */,
 				AA1A11F82151E85500504AE2 /* Resources */,
-				E5B91636FFD057112E3C7A00 /* [CP] Embed Pods Frameworks */,
+				05E0CB5202E43F3D07E5F7E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,14 +124,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "Kei Kawamura";
+				ORGANIZATIONNAME = "Tomohiro Hori";
 				TargetAttributes = {
 					AA1A11F92151E85500504AE2 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = AA1A11F52151E85500504AE2 /* Build configuration list for PBXProject "kissa_list" */;
+			buildConfigurationList = AA1A11F52151E85500504AE2 /* Build configuration list for PBXProject "kissa_kitchen" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -185,7 +164,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A3481E2E0264BF88F98EA682 /* [CP] Check Pods Manifest.lock */ = {
+		05E0CB5202E43F3D07E5F7E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-kissa_list/Pods-kissa_list-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kissa_list/Pods-kissa_list-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF414FD6A402095508E19F59 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,30 +212,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5B91636FFD057112E3C7A00 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-kissa_list/Pods-kissa_list-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kissa_list/Pods-kissa_list-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -238,16 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA1A12182153519C00504AE2 /* DOrderListViewController.swift in Sources */,
-				AA1A121A215351BC00504AE2 /* DeOrderListViewController.swift in Sources */,
-				AA1A12122151EDAD00504AE2 /* BOrderListViewController.swift in Sources */,
 				AA1A12002151E85500504AE2 /* ViewController.swift in Sources */,
-				AAC44955218CDBF8006132CC /* SOutOrderListViewController.swift in Sources */,
+				EAFF068D223F9916007FD5F6 /* WOrderListViewController.swift in Sources */,
 				AA1A11FE2151E85500504AE2 /* AppDelegate.swift in Sources */,
-				AA2967FF217173170067634E /* DXOrderListViewController.swift in Sources */,
-				AA1A12162152682600504AE2 /* SOrderListViewController.swift in Sources */,
-				AA1A1214215256CE00504AE2 /* BOutOrderListViewController.swift in Sources */,
-				AAC44957218CDDB9006132CC /* BOutSubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,19 +365,19 @@
 		};
 		AA1A120D2151E85800504AE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F861CE1F3706F44A523F7B97 /* Pods-kissa_list.debug.xcconfig */;
+			baseConfigurationReference = 519AC206E3123BE275064708 /* Pods-kissa_list.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63MASNSR4G;
-				INFOPLIST_FILE = kissa_list/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				DEVELOPMENT_TEAM = 8DYG42U2XW;
+				INFOPLIST_FILE = "$(SRCROOT)/kissa_kitchen/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kissa----.list......................";
+				PRODUCT_BUNDLE_IDENTIFIER = "t-hori.kissa-kitchen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -413,19 +387,19 @@
 		};
 		AA1A120E2151E85800504AE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B9AC1FF53855EFD24FF88C8 /* Pods-kissa_list.release.xcconfig */;
+			baseConfigurationReference = A26CAD2CC485F03551F2EECD /* Pods-kissa_list.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63MASNSR4G;
-				INFOPLIST_FILE = kissa_list/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				DEVELOPMENT_TEAM = 8DYG42U2XW;
+				INFOPLIST_FILE = "$(SRCROOT)/kissa_kitchen/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kissa----.list......................";
+				PRODUCT_BUNDLE_IDENTIFIER = "t-hori.kissa-kitchen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -436,7 +410,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA1A11F52151E85500504AE2 /* Build configuration list for PBXProject "kissa_list" */ = {
+		AA1A11F52151E85500504AE2 /* Build configuration list for PBXProject "kissa_kitchen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA1A120A2151E85800504AE2 /* Debug */,

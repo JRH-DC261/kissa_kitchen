@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1040019418531-6496mb539e3b3dpqcsqufheobv9ddb2l.apps.googleusercontent.com</string>
+	<string>339859095556-nd672arl55kglhnho4m4dvkspari8mcl.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1040019418531-6496mb539e3b3dpqcsqufheobv9ddb2l</string>
+	<string>com.googleusercontent.apps.339859095556-nd672arl55kglhnho4m4dvkspari8mcl</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBQKnvWSZfOP1AikIywTtw4MZGC0pgJb3Q</string>
+	<string>AIzaSyCvYV1BGOjfHOPbxMxQAz6UzbZihfCt-Y8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1040019418531</string>
+	<string>339859095556</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>kissa----.list....</string>
+	<string>t-hori.kissa-kitchen</string>
 	<key>PROJECT_ID</key>
-	<string>kissaorder</string>
+	<string>kissasystem2019</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kissaorder.appspot.com</string>
+	<string>kissasystem2019.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1040019418531:ios:49f39c2dc45b7d64</string>
+	<string>1:339859095556:ios:34734e75449e8c4d</string>
 	<key>DATABASE_URL</key>
-	<string>https://kissaorder.firebaseio.com</string>
+	<string>https://kissasystem2019.firebaseio.com</string>
 </dict>
 </plist>
