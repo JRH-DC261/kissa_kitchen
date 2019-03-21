@@ -1,5 +1,5 @@
 //
-//  WOrderListViewController.swift
+//  POrderListViewController.swift
 //  kissa_list
 //
 //  Originally created by Kei Kawamura on 2018/09/19.
@@ -11,13 +11,13 @@ import Foundation
 import UIKit
 import Firebase
 
-class WOrderListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class POrderListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     // インスタンス変数
     var DBRef:DatabaseReference!
     var hogeArray : [String] = []
     var array1 : [String] = []
-    var W1Amount = Array(repeating: "0", count: 20)
-    var W2Amount = Array(repeating: "0", count: 20)
+    var P1Amount = Array(repeating: "0", count: 20)
+    var P2Amount = Array(repeating: "0", count: 20)
     var time = Array(repeating: "0", count: 20)
     var dateUnix: TimeInterval = 0
     var hogeTime : String?
@@ -34,12 +34,12 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let timeLabel = cell.contentView.viewWithTag(1) as! UILabel
         let tableLabel = cell.contentView.viewWithTag(2) as! UILabel
-        let W1Label = cell.contentView.viewWithTag(3) as! UILabel
-        let W2Label = cell.contentView.viewWithTag(4) as! UILabel
+        let P1Label = cell.contentView.viewWithTag(3) as! UILabel
+        let P2Label = cell.contentView.viewWithTag(4) as! UILabel
         
         var status1 : String?
         var intStatus1 : Int?
-        let defaultPlaceX = DBRef.child("table/WStatus").child(hogeArray[indexPath.row])
+        let defaultPlaceX = DBRef.child("table/PStatus").child(hogeArray[indexPath.row])
         defaultPlaceX.observe(.value, with: { snapshot in
             status1 = (snapshot.value! as AnyObject).description
             intStatus1 = Int(status1!)
@@ -59,18 +59,18 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
             formatter.dateFormat = "HH:mm:ss"
             self.time[indexPath.row] = formatter.string(from: hogeDate as Date)
         })
-        let defaultPlace1 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("W1Amount")
+        let defaultPlace1 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("P1Amount")
         defaultPlace1.observe(.value, with: { snapshot in
-            self.W1Amount[indexPath.row] = (snapshot.value! as AnyObject).description
+            self.P1Amount[indexPath.row] = (snapshot.value! as AnyObject).description
         })
-        let defaultPlace2 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("W2Amount")
+        let defaultPlace2 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("P2Amount")
         defaultPlace2.observe(.value, with: { snapshot in
-            self.W2Amount[indexPath.row] = (snapshot.value! as AnyObject).description
+            self.P2Amount[indexPath.row] = (snapshot.value! as AnyObject).description
         })
         timeLabel.text = "\(String(describing: self.time[indexPath.row]))"
         tableLabel.text = "Table \(String(describing: self.hogeArray[indexPath.row]))"
-        W1Label.text =  "\(String(describing: self.W1Amount[indexPath.row]))"
-        W2Label.text =  "\(String(describing: self.W2Amount[indexPath.row]))"
+        P1Label.text =  "\(String(describing: self.P1Amount[indexPath.row]))"
+        P2Label.text =  "\(String(describing: self.P2Amount[indexPath.row]))"
         
         return cell
     }
@@ -78,7 +78,7 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedRow = hogeArray[indexPath.row]
         let defaultPlace = self.DBRef.child("table")
-        defaultPlace.child("WStatus").child(self.selectedRow!).observeSingleEvent(of: .value, with: { (snapshot) in
+        defaultPlace.child("PStatus").child(self.selectedRow!).observeSingleEvent(of: .value, with: { (snapshot) in
             self.status = (snapshot.value! as AnyObject).description
             if self.status == "0"{
                 let alertController = UIAlertController(title: "調理完了",message: "調理完了としてマークします", preferredStyle: UIAlertController.Style.alert)
@@ -89,7 +89,7 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
                             self.DBRef.child("table/status").child(self.selectedRow!).setValue(2)
                         }
                     })
-                    defaultPlace.child("WStatus").child(self.selectedRow!).setValue(1)
+                    defaultPlace.child("PStatus").child(self.selectedRow!).setValue(1)
                 }
                 let cancelButton = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
                 alertController.addAction(okAction)
@@ -98,7 +98,7 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
             } else {
                 let alertController = UIAlertController(title: "調理未完了",message: "調理完了を取消します", preferredStyle: UIAlertController.Style.alert)
                 let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default){ (action: UIAlertAction) in
-                    defaultPlace.child("WStatus").child(self.selectedRow!).setValue(0)
+                    defaultPlace.child("PStatus").child(self.selectedRow!).setValue(0)
                 }
                 let cancelButton = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
                 alertController.addAction(okAction)

@@ -15,6 +15,8 @@
 		AA755DC521800E9A003E482B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA755DC421800E9A003E482B /* GoogleService-Info.plist */; };
 		DAFA87FC90CA332335201299 /* Pods_kissa_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79B48210439E067AD4BEFFA /* Pods_kissa_list.framework */; };
 		EAFF068D223F9916007FD5F6 /* WOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF068C223F9915007FD5F6 /* WOrderListViewController.swift */; };
+		EAFF068F223FB246007FD5F6 /* POrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF068E223FB245007FD5F6 /* POrderListViewController.swift */; };
+		EAFF0691223FB261007FD5F6 /* SOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF0690223FB260007FD5F6 /* SOrderListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		AA1A12092151E85800504AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA755DC421800E9A003E482B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EAFF068C223F9915007FD5F6 /* WOrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WOrderListViewController.swift; sourceTree = "<group>"; };
+		EAFF068E223FB245007FD5F6 /* POrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POrderListViewController.swift; sourceTree = "<group>"; };
+		EAFF0690223FB260007FD5F6 /* SOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOrderListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				AA1A12012151E85500504AE2 /* Main.storyboard */,
 				AA1A11FF2151E85500504AE2 /* ViewController.swift */,
 				EAFF068C223F9915007FD5F6 /* WOrderListViewController.swift */,
+				EAFF068E223FB245007FD5F6 /* POrderListViewController.swift */,
+				EAFF0690223FB260007FD5F6 /* SOrderListViewController.swift */,
 				AA1A12062151E85800504AE2 /* LaunchScreen.storyboard */,
 				AA1A12042151E85800504AE2 /* Assets.xcassets */,
 				AA1A12092151E85800504AE2 /* Info.plist */,
@@ -221,7 +227,9 @@
 			files = (
 				AA1A12002151E85500504AE2 /* ViewController.swift in Sources */,
 				EAFF068D223F9916007FD5F6 /* WOrderListViewController.swift in Sources */,
+				EAFF0691223FB261007FD5F6 /* SOrderListViewController.swift in Sources */,
 				AA1A11FE2151E85500504AE2 /* AppDelegate.swift in Sources */,
+				EAFF068F223FB246007FD5F6 /* POrderListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

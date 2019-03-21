@@ -10,14 +10,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBAction func ToBOrderList(_ sender: Any) {
+    @IBAction func ToWOrderList(_ sender: Any) {
         performSegue(withIdentifier: "toWOrderList", sender: nil)
+    }
+    @IBAction func ToPOrderList(_ sender: Any) {
+        performSegue(withIdentifier: "toPOrderList", sender: nil)
+    }
+    @IBAction func ToSOrderList(_ sender: Any) {
+        performSegue(withIdentifier: "toSOrderList", sender: nil)
     }
     
     override func  prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination
         if (segue.identifier == "toWOrderList"){
             nextVC.navigationItem.title = "サンドウィッチ"
+        }else if (segue.identifier == "toPOrderList"){
+            nextVC.navigationItem.title = "パンケーキ"
+        }else if (segue.identifier == "toSOrderList"){
+            nextVC.navigationItem.title = "スープ"
         }
     }
     
