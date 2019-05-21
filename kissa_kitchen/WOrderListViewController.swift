@@ -17,26 +17,26 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
     var hogeArray : [String] = []
     var array1 : [String] = []
     var W1Amount = Array(repeating: "0", count: 20)
-    var W2Amount = Array(repeating: "0", count: 20)
+    //var W2Amount = Array(repeating: "0", count: 20)
     var time = Array(repeating: "0", count: 20)
     var dateUnix: TimeInterval = 0
     var hogeTime : String?
     var selectedRow : String?
     var status : String?
-    
+
     @IBOutlet weak var tableView: UITableView!
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.hogeArray.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let timeLabel = cell.contentView.viewWithTag(1) as! UILabel
         let tableLabel = cell.contentView.viewWithTag(2) as! UILabel
         let W1Label = cell.contentView.viewWithTag(3) as! UILabel
-        let W2Label = cell.contentView.viewWithTag(4) as! UILabel
-        
+        //let W2Label = cell.contentView.viewWithTag(4) as! UILabel
+
         var status1 : String?
         var intStatus1 : Int?
         let defaultPlaceX = DBRef.child("table/WStatus").child(hogeArray[indexPath.row])
@@ -49,7 +49,7 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
                 cell.contentView.backgroundColor = UIColor.clear
             }
         })
-        
+
         let defaultPlace0 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("time")
         defaultPlace0.observe(.value, with: { snapshot in
             self.hogeTime = (snapshot.value! as AnyObject).description
@@ -63,18 +63,18 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         defaultPlace1.observe(.value, with: { snapshot in
             self.W1Amount[indexPath.row] = (snapshot.value! as AnyObject).description
         })
-        let defaultPlace2 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("W2Amount")
+        /*let defaultPlace2 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("W2Amount")
         defaultPlace2.observe(.value, with: { snapshot in
             self.W2Amount[indexPath.row] = (snapshot.value! as AnyObject).description
-        })
+        })*/
         timeLabel.text = "\(String(describing: self.time[indexPath.row]))"
         tableLabel.text = "Table \(String(describing: self.hogeArray[indexPath.row]))"
         W1Label.text =  "\(String(describing: self.W1Amount[indexPath.row]))"
-        W2Label.text =  "\(String(describing: self.W2Amount[indexPath.row]))"
-        
+        //W2Label.text =  "\(String(describing: self.W2Amount[indexPath.row]))"
+
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedRow = hogeArray[indexPath.row]
         let defaultPlace = self.DBRef.child("table")
@@ -106,9 +106,9 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.present(alertController,animated: true,completion: nil)
             }
         })
-        
+
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //インスタンスを作成
@@ -136,12 +136,12 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
             repeats: true
         )
     }
-    
+
     @objc func newArray(_ sender: Timer) {
         self.tableView.reloadData()
     }
-    
-    
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

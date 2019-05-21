@@ -14,6 +14,8 @@
 		AA1A12082151E85800504AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1A12062151E85800504AE2 /* LaunchScreen.storyboard */; };
 		AA755DC521800E9A003E482B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA755DC421800E9A003E482B /* GoogleService-Info.plist */; };
 		DAFA87FC90CA332335201299 /* Pods_kissa_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79B48210439E067AD4BEFFA /* Pods_kissa_list.framework */; };
+		EA6521E52293D693006BFD98 /* DOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6521E32293D691006BFD98 /* DOrderListViewController.swift */; };
+		EA6521E62293D693006BFD98 /* D2OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6521E42293D692006BFD98 /* D2OrderListViewController.swift */; };
 		EAFF068D223F9916007FD5F6 /* WOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF068C223F9915007FD5F6 /* WOrderListViewController.swift */; };
 		EAFF068F223FB246007FD5F6 /* POrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF068E223FB245007FD5F6 /* POrderListViewController.swift */; };
 		EAFF0691223FB261007FD5F6 /* SOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF0690223FB260007FD5F6 /* SOrderListViewController.swift */; };
@@ -31,6 +33,8 @@
 		AA1A12072151E85800504AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA1A12092151E85800504AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA755DC421800E9A003E482B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EA6521E32293D691006BFD98 /* DOrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOrderListViewController.swift; sourceTree = "<group>"; };
+		EA6521E42293D692006BFD98 /* D2OrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D2OrderListViewController.swift; sourceTree = "<group>"; };
 		EAFF068C223F9915007FD5F6 /* WOrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WOrderListViewController.swift; sourceTree = "<group>"; };
 		EAFF068E223FB245007FD5F6 /* POrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POrderListViewController.swift; sourceTree = "<group>"; };
 		EAFF0690223FB260007FD5F6 /* SOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOrderListViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				AA1A12012151E85500504AE2 /* Main.storyboard */,
 				AA1A11FF2151E85500504AE2 /* ViewController.swift */,
 				EAFF068C223F9915007FD5F6 /* WOrderListViewController.swift */,
+				EA6521E42293D692006BFD98 /* D2OrderListViewController.swift */,
+				EA6521E32293D691006BFD98 /* DOrderListViewController.swift */,
 				EAFF068E223FB245007FD5F6 /* POrderListViewController.swift */,
 				EAFF0690223FB260007FD5F6 /* SOrderListViewController.swift */,
 				AA1A12062151E85800504AE2 /* LaunchScreen.storyboard */,
@@ -225,9 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6521E52293D693006BFD98 /* DOrderListViewController.swift in Sources */,
 				AA1A12002151E85500504AE2 /* ViewController.swift in Sources */,
 				EAFF068D223F9916007FD5F6 /* WOrderListViewController.swift in Sources */,
 				EAFF0691223FB261007FD5F6 /* SOrderListViewController.swift in Sources */,
+				EA6521E62293D693006BFD98 /* D2OrderListViewController.swift in Sources */,
 				AA1A11FE2151E85500504AE2 /* AppDelegate.swift in Sources */,
 				EAFF068F223FB246007FD5F6 /* POrderListViewController.swift in Sources */,
 			);

@@ -19,7 +19,13 @@ class ViewController: UIViewController {
     @IBAction func ToSOrderList(_ sender: Any) {
         performSegue(withIdentifier: "toSOrderList", sender: nil)
     }
-    
+    @IBAction func ToDOrderList(_ sender: Any) {
+        performSegue(withIdentifier: "toDOrderList", sender: nil)
+    }
+    @IBAction func ToD2OrderList(_ sender: Any) {
+        performSegue(withIdentifier: "toD2OrderList", sender: nil)
+    }
+
     override func  prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination
         if (segue.identifier == "toWOrderList"){
@@ -28,13 +34,16 @@ class ViewController: UIViewController {
             nextVC.navigationItem.title = "パンケーキ"
         }else if (segue.identifier == "toSOrderList"){
             nextVC.navigationItem.title = "スープ"
+        }else if (segue.identifier == "toDOrderList"){
+            nextVC.navigationItem.title = "ドリンク"
+        }else if (segue.identifier == "toD2OrderList"){
+            nextVC.navigationItem.title = "カクテル"
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
 }
-

@@ -18,27 +18,27 @@ class SOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
     var array1 : [String] = []
     var S1Amount = Array(repeating: "0", count: 20)
     var S2Amount = Array(repeating: "0", count: 20)
-    var S3Amount = Array(repeating: "0", count: 20)
+    //var S3Amount = Array(repeating: "0", count: 20)
     var time = Array(repeating: "0", count: 20)
     var dateUnix: TimeInterval = 0
     var hogeTime : String?
     var selectedRow : String?
     var status : String?
-    
+
     @IBOutlet weak var tableView: UITableView!
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.hogeArray.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let timeLabel = cell.contentView.viewWithTag(1) as! UILabel
         let tableLabel = cell.contentView.viewWithTag(2) as! UILabel
         let S1Label = cell.contentView.viewWithTag(3) as! UILabel
         let S2Label = cell.contentView.viewWithTag(4) as! UILabel
-        let S3Label = cell.contentView.viewWithTag(5) as! UILabel
-        
+        //let S3Label = cell.contentView.viewWithTag(5) as! UILabel
+
         var status1 : String?
         var intStatus1 : Int?
         let defaultPlaceX = DBRef.child("table/SStatus").child(hogeArray[indexPath.row])
@@ -51,7 +51,7 @@ class SOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
                 cell.contentView.backgroundColor = UIColor.clear
             }
         })
-        
+
         let defaultPlace0 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("time")
         defaultPlace0.observe(.value, with: { snapshot in
             self.hogeTime = (snapshot.value! as AnyObject).description
@@ -69,19 +69,19 @@ class SOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         defaultPlace2.observe(.value, with: { snapshot in
             self.S2Amount[indexPath.row] = (snapshot.value! as AnyObject).description
         })
-        let defaultPlace3 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("S3Amount")
+        /*let defaultPlace3 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("S3Amount")
         defaultPlace3.observe(.value, with: { snapshot in
             self.S3Amount[indexPath.row] = (snapshot.value! as AnyObject).description
-        })
+        })*/
         timeLabel.text = "\(String(describing: self.time[indexPath.row]))"
         tableLabel.text = "Table \(String(describing: self.hogeArray[indexPath.row]))"
         S1Label.text =  "\(String(describing: self.S1Amount[indexPath.row]))"
         S2Label.text =  "\(String(describing: self.S2Amount[indexPath.row]))"
-        S3Label.text =  "\(String(describing: self.S3Amount[indexPath.row]))"
-        
+        //S3Label.text =  "\(String(describing: self.S3Amount[indexPath.row]))"
+
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedRow = hogeArray[indexPath.row]
         let defaultPlace = self.DBRef.child("table")
@@ -113,9 +113,9 @@ class SOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.present(alertController,animated: true,completion: nil)
             }
         })
-        
+
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //インスタンスを作成
@@ -143,12 +143,12 @@ class SOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
             repeats: true
         )
     }
-    
+
     @objc func newArray(_ sender: Timer) {
         self.tableView.reloadData()
     }
-    
-    
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
