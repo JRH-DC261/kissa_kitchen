@@ -42,13 +42,15 @@ class DOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         let D4Label = cell.contentView.viewWithTag(6) as! UILabel
 
         var status1 : String?
-        var intstatus1 : Int?
+        var intStatus1 : Int?
         let defaultPlaceX = DBRef.child("table/DStatus").child(hogeArray[indexPath.row])
         defaultPlaceX.observe(.value, with: { snapshot in
             status1 = (snapshot.value! as AnyObject).description
-            intstatus1 = Int(status1!)
-            if intstatus1! == 1||intstatus1! == 2{
+            intStatus1 = Int(status1!)
+            if intStatus1! == 1{
                 cell.contentView.backgroundColor = UIColor(red:0.87, green:0.91, blue:0.70, alpha:1.0)
+            }else if intStatus1! == 2{
+                cell.isHidden = true
             }else{
                 cell.contentView.backgroundColor = UIColor.clear
             }
@@ -86,6 +88,10 @@ class DOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         D3Label.text =  "\(String(describing: self.D3Amount[indexPath.row]))"
         D4Label.text =  "\(String(describing: self.D4Amount[indexPath.row]))"
 
+        if D1Label.text == "0" && D2Label.text == "0" && D3Label.text == "0" && D4Label.text == "0"{
+            cell.isHidden = true
+        }
+        
         return cell
     }
 

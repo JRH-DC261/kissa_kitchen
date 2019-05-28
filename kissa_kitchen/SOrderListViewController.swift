@@ -15,7 +15,6 @@ class SOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
     // インスタンス変数
     var DBRef:DatabaseReference!
     var hogeArray : [String] = []
-    var array1 : [String] = []
     var S1Amount = Array(repeating: "0", count: 20)
     var S2Amount = Array(repeating: "0", count: 20)
     //var S3Amount = Array(repeating: "0", count: 20)
@@ -38,15 +37,18 @@ class SOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         let S1Label = cell.contentView.viewWithTag(3) as! UILabel
         let S2Label = cell.contentView.viewWithTag(4) as! UILabel
         //let S3Label = cell.contentView.viewWithTag(5) as! UILabel
-
+        
+        
         var status1 : String?
         var intStatus1 : Int?
         let defaultPlaceX = DBRef.child("table/SStatus").child(hogeArray[indexPath.row])
         defaultPlaceX.observe(.value, with: { snapshot in
             status1 = (snapshot.value! as AnyObject).description
             intStatus1 = Int(status1!)
-            if intStatus1! == 1||intStatus1! == 2{
+            if intStatus1! == 1{
                 cell.contentView.backgroundColor = UIColor(red:0.87, green:0.91, blue:0.70, alpha:1.0)
+            }else if intStatus1! == 2{
+                cell.isHidden = true
             }else{
                 cell.contentView.backgroundColor = UIColor.clear
             }
@@ -78,6 +80,10 @@ class SOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         S1Label.text =  "\(String(describing: self.S1Amount[indexPath.row]))"
         S2Label.text =  "\(String(describing: self.S2Amount[indexPath.row]))"
         //S3Label.text =  "\(String(describing: self.S3Amount[indexPath.row]))"
+
+        if S1Label.text == "0" && S2Label.text == "0"{
+            cell.isHidden = true
+        }
 
         return cell
     }

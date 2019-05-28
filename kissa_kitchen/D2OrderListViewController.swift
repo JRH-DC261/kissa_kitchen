@@ -44,13 +44,15 @@ class D2OrderListViewController: UIViewController, UITableViewDelegate, UITableV
         let D15Label = cell.contentView.viewWithTag(7) as! UILabel
 
         var status1 : String?
-        var intstatus1 : Int?
+        var intStatus1 : Int?
         let defaultPlaceX = DBRef.child("table/DStatus").child(hogeArray[indexPath.row])
         defaultPlaceX.observe(.value, with: { snapshot in
             status1 = (snapshot.value! as AnyObject).description
-            intstatus1 = Int(status1!)
-            if intstatus1! == 1||intstatus1! == 2{
+            intStatus1 = Int(status1!)
+            if intStatus1! == 1{
                 cell.contentView.backgroundColor = UIColor(red:0.87, green:0.91, blue:0.70, alpha:1.0)
+            }else if intStatus1! == 2{
+                cell.isHidden = true
             }else{
                 cell.contentView.backgroundColor = UIColor.clear
             }
@@ -93,6 +95,10 @@ class D2OrderListViewController: UIViewController, UITableViewDelegate, UITableV
         D14Label.text =  "\(String(describing: self.D14Amount[indexPath.row]))"
         D15Label.text =  "\(String(describing: self.D15Amount[indexPath.row]))"
 
+        if D11Label.text == "0" && D12Label.text == "0" && D13Label.text == "0" && D14Label.text == "0" && D15Label.text == "0"{
+            cell.isHidden = true
+        }
+        
         return cell
     }
 

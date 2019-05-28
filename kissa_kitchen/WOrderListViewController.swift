@@ -43,8 +43,10 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         defaultPlaceX.observe(.value, with: { snapshot in
             status1 = (snapshot.value! as AnyObject).description
             intStatus1 = Int(status1!)
-            if intStatus1! == 1||intStatus1! == 2{
+            if intStatus1! == 1{
                 cell.contentView.backgroundColor = UIColor(red:0.87, green:0.91, blue:0.70, alpha:1.0)
+            }else if intStatus1! == 2{
+                cell.isHidden = true
             }else{
                 cell.contentView.backgroundColor = UIColor.clear
             }
@@ -72,6 +74,10 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         W1Label.text =  "\(String(describing: self.W1Amount[indexPath.row]))"
         //W2Label.text =  "\(String(describing: self.W2Amount[indexPath.row]))"
 
+        if W1Label.text == "0"{
+            cell.isHidden = true
+        }
+        
         return cell
     }
 

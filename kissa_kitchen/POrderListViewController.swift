@@ -43,8 +43,10 @@ class POrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         defaultPlaceX.observe(.value, with: { snapshot in
             status1 = (snapshot.value! as AnyObject).description
             intStatus1 = Int(status1!)
-            if intStatus1! == 1||intStatus1! == 2{
+            if intStatus1! == 1{
                 cell.contentView.backgroundColor = UIColor(red:0.87, green:0.91, blue:0.70, alpha:1.0)
+            }else if intStatus1! == 2{
+                cell.isHidden = true
             }else{
                 cell.contentView.backgroundColor = UIColor.clear
             }
@@ -71,6 +73,10 @@ class POrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         tableLabel.text = "Table \(String(describing: self.hogeArray[indexPath.row]))"
         P1Label.text =  "\(String(describing: self.P1Amount[indexPath.row]))"
         P2Label.text =  "\(String(describing: self.P2Amount[indexPath.row]))"
+        
+        if P1Label.text == "0" && P2Label.text == "0"{
+            cell.isHidden = true
+        }
         
         return cell
     }
