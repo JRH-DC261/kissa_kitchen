@@ -17,7 +17,7 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
     var hogeArray : [String] = []
     var array1 : [String] = []
     var W1Amount = Array(repeating: "0", count: 20)
-    //var W2Amount = Array(repeating: "0", count: 20)
+    var W2Amount = Array(repeating: "0", count: 20)
     var time = Array(repeating: "0", count: 20)
     var dateUnix: TimeInterval = 0
     var hogeTime : String?
@@ -35,7 +35,7 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         let timeLabel = cell.contentView.viewWithTag(1) as! UILabel
         let tableLabel = cell.contentView.viewWithTag(2) as! UILabel
         let W1Label = cell.contentView.viewWithTag(3) as! UILabel
-        //let W2Label = cell.contentView.viewWithTag(4) as! UILabel
+        let W2Label = cell.contentView.viewWithTag(4) as! UILabel
 
         var status1 : String?
         var intStatus1 : Int?
@@ -65,16 +65,16 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         defaultPlace1.observe(.value, with: { snapshot in
             self.W1Amount[indexPath.row] = (snapshot.value! as AnyObject).description
         })
-        /*let defaultPlace2 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("W2Amount")
+        let defaultPlace2 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("W2Amount")
         defaultPlace2.observe(.value, with: { snapshot in
             self.W2Amount[indexPath.row] = (snapshot.value! as AnyObject).description
-        })*/
+        })
         timeLabel.text = "\(String(describing: self.time[indexPath.row]))"
         tableLabel.text = "Table \(String(describing: self.hogeArray[indexPath.row]))"
         W1Label.text =  "\(String(describing: self.W1Amount[indexPath.row]))"
-        //W2Label.text =  "\(String(describing: self.W2Amount[indexPath.row]))"
+        W2Label.text =  "\(String(describing: self.W2Amount[indexPath.row]))"
 
-        if W1Label.text == "0"{
+        if W1Label.text == "0" && W2Label.text == "0"{
             cell.isHidden = true
         }
         
@@ -126,7 +126,7 @@ class WOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
             for item in (snapshot.children) {
                 let snapshot = item as! DataSnapshot
                 let dict = snapshot.value as! String
-                if Int(dict)!<100{
+                if Int(dict)!<200{
                     array.append(dict)
                 }
             }

@@ -43,13 +43,26 @@ class POrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         defaultPlaceX.observe(.value, with: { snapshot in
             status1 = (snapshot.value! as AnyObject).description
             intStatus1 = Int(status1!)
-            if intStatus1! == 1{
+            /*if intStatus1! == 1{
                 cell.contentView.backgroundColor = UIColor(red:0.87, green:0.91, blue:0.70, alpha:1.0)
             }else if intStatus1! == 2{
                 cell.isHidden = true
             }else{
                 cell.contentView.backgroundColor = UIColor.clear
-            }
+            }*/
+            
+            var W1Amount : String?
+            let defaultPlaceW = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("W1Amount")
+            defaultPlaceW.observe(.value, with: { snapshot in
+                W1Amount = (snapshot.value! as AnyObject).description
+                if intStatus1! == 1{
+                    cell.contentView.backgroundColor = UIColor(red:0.87, green:0.91, blue:0.70, alpha:1.0)
+                }else if W1Amount != "0" && intStatus1! != 1{
+                    cell.contentView.backgroundColor = UIColor(red:0.79, green:0.78, blue:0.87, alpha:1.0)
+                }else{
+                    cell.contentView.backgroundColor = UIColor.clear
+                }
+            })
         })
         
         let defaultPlace0 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("time")

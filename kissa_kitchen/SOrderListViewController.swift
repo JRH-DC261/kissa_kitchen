@@ -49,10 +49,15 @@ class SOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
                 cell.contentView.backgroundColor = UIColor(red:0.87, green:0.91, blue:0.70, alpha:1.0)
             }else if intStatus1! == 2{
                 cell.isHidden = true
+            }else if Int(self.hogeArray[indexPath.row])! > 100{
+                cell.contentView.backgroundColor = UIColor(red:0.79, green:0.78, blue:0.87, alpha:1.0)
             }else{
                 cell.contentView.backgroundColor = UIColor.clear
             }
         })
+        
+        
+        
 
         let defaultPlace0 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("time")
         defaultPlace0.observe(.value, with: { snapshot in

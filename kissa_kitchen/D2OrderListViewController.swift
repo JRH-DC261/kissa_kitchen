@@ -18,7 +18,7 @@ class D2OrderListViewController: UIViewController, UITableViewDelegate, UITableV
     var array1 : [String] = []
     var D11Amount = Array(repeating: "0", count: 20)
     var D12Amount = Array(repeating: "0", count: 20)
-    var D13Amount = Array(repeating: "0", count: 20)
+    //var D13Amount = Array(repeating: "0", count: 20)
     var D14Amount = Array(repeating: "0", count: 20)
     var D15Amount = Array(repeating: "0", count: 20)
     var time = Array(repeating: "0", count: 20)
@@ -39,7 +39,7 @@ class D2OrderListViewController: UIViewController, UITableViewDelegate, UITableV
         let tableLabel = cell.contentView.viewWithTag(2) as! UILabel
         let D11Label = cell.contentView.viewWithTag(3) as! UILabel
         let D12Label = cell.contentView.viewWithTag(4) as! UILabel
-        let D13Label = cell.contentView.viewWithTag(5) as! UILabel
+        //let D13Label = cell.contentView.viewWithTag(5) as! UILabel
         let D14Label = cell.contentView.viewWithTag(6) as! UILabel
         let D15Label = cell.contentView.viewWithTag(7) as! UILabel
 
@@ -75,10 +75,10 @@ class D2OrderListViewController: UIViewController, UITableViewDelegate, UITableV
         defaultPlace12.observe(.value, with: { snapshot in
             self.D12Amount[indexPath.row] = (snapshot.value! as AnyObject).description
         })
-        let defaultPlace13 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("D13Amount")
+        /*let defaultPlace13 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("D13Amount")
         defaultPlace13.observe(.value, with: { snapshot in
             self.D13Amount[indexPath.row] = (snapshot.value! as AnyObject).description
-        })
+        })*/
         let defaultPlace14 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("D14Amount")
         defaultPlace14.observe(.value, with: { snapshot in
             self.D14Amount[indexPath.row] = (snapshot.value! as AnyObject).description
@@ -91,11 +91,11 @@ class D2OrderListViewController: UIViewController, UITableViewDelegate, UITableV
         tableLabel.text = "Table \(String(describing: self.hogeArray[indexPath.row]))"
         D11Label.text =  "\(String(describing: self.D11Amount[indexPath.row]))"
         D12Label.text =  "\(String(describing: self.D12Amount[indexPath.row]))"
-        D13Label.text =  "\(String(describing: self.D13Amount[indexPath.row]))"
+        //D13Label.text =  "\(String(describing: self.D13Amount[indexPath.row]))"
         D14Label.text =  "\(String(describing: self.D14Amount[indexPath.row]))"
         D15Label.text =  "\(String(describing: self.D15Amount[indexPath.row]))"
 
-        if D11Label.text == "0" && D12Label.text == "0" && D13Label.text == "0" && D14Label.text == "0" && D15Label.text == "0"{
+        if D11Label.text == "0" && D12Label.text == "0" && D14Label.text == "0" && D15Label.text == "0"{
             cell.isHidden = true
         }
         

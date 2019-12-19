@@ -20,6 +20,7 @@ class DOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
     var D2Amount = Array(repeating: "0", count: 20)
     var D3Amount = Array(repeating: "0", count: 20)
     var D4Amount = Array(repeating: "0", count: 20)
+    var D5Amount = Array(repeating: "0", count: 20)
     var time = Array(repeating: "0", count: 20)
     var dateUnix: TimeInterval = 0
     var hogeTime : String?
@@ -40,6 +41,7 @@ class DOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         let D2Label = cell.contentView.viewWithTag(4) as! UILabel
         let D3Label = cell.contentView.viewWithTag(5) as! UILabel
         let D4Label = cell.contentView.viewWithTag(6) as! UILabel
+        let D5Label = cell.contentView.viewWithTag(7) as! UILabel
 
         var status1 : String?
         var intStatus1 : Int?
@@ -81,14 +83,19 @@ class DOrderListViewController: UIViewController, UITableViewDelegate, UITableVi
         defaultPlace4.observe(.value, with: { snapshot in
             self.D4Amount[indexPath.row] = (snapshot.value! as AnyObject).description
         })
+        let defaultPlace5 = self.DBRef.child("table/order").child(self.hogeArray[indexPath.row]).child("D5Amount")
+        defaultPlace5.observe(.value, with: { snapshot in
+            self.D5Amount[indexPath.row] = (snapshot.value! as AnyObject).description
+        })
         //timeLabel.text = "\(String(describing: self.time[indexPath.row]))"
         tableLabel.text = "Table \(String(describing: self.hogeArray[indexPath.row]))"
         D1Label.text =  "\(String(describing: self.D1Amount[indexPath.row]))"
         D2Label.text =  "\(String(describing: self.D2Amount[indexPath.row]))"
         D3Label.text =  "\(String(describing: self.D3Amount[indexPath.row]))"
         D4Label.text =  "\(String(describing: self.D4Amount[indexPath.row]))"
+        D5Label.text =  "\(String(describing: self.D5Amount[indexPath.row]))"
 
-        if D1Label.text == "0" && D2Label.text == "0" && D3Label.text == "0" && D4Label.text == "0"{
+        if D1Label.text == "0" && D2Label.text == "0" && D3Label.text == "0" && D4Label.text == "0" && D5Label.text == "0"{
             cell.isHidden = true
         }
         
